@@ -1,3 +1,4 @@
+
 /* 
 didactic purposes
 Some items are intentionally not optimized or not coded in the right way
@@ -6,12 +7,14 @@ version 1.0
 */
 
 body {
-    background-color:floralwhite;
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    line-height: 125%;
-    padding: 0;
-    margin: 0;
-}
+ background-color:floralwhite;
+ background-image:url("http://wallpaperdownload.info/download/2179/Creative1/Coca_cola_bottle_drink_grass_nature_wallpaper_-1365x639.jpg/") ;
+ font-family: Verdana, Helvetica, Arial, sans-serif;
+                                               line-height: 125%;
+                                               padding: 0;
+                                               margin: 0;
+
+                                           }
 #img style{
     color: floralwhite;
 }
@@ -69,7 +72,7 @@ h1 {
 
 #postcontent {
     position: absolute;
-    left: 360px;
+    left: 490px;
     top: 110px;
     width: 120px;
     height:180px;
@@ -86,7 +89,8 @@ h1 {
     top: 210px;
     left: 140px;
     width: 200px;
-    background-color: #e91100;
+    background: #CCC;
+    opacity:0.6;
     color: #e91100;
     padding-left: .8em;
 
