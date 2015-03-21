@@ -1,6 +1,6 @@
 /* 
 didactic purposes
-Some items are insdfsdstentionally not optimized or not coded in the right way
+Some items are intentionally not optimized or not coded in the right way
 FastTrackIT 2015,
 version 1.0
 */
@@ -12,11 +12,14 @@ body {
     padding: 0;
     margin: 0;
 }
+#img style{
+    color: floralwhite;
+}
 
 
 h1 {
     font-size: large;
-    background-color: #e91100;
+    background-color: black;
     color: black;
     padding-top: 2em;
     padding-bottom: .2em;
@@ -27,18 +30,20 @@ h1 {
 #tagline p {
     font-style: italic;
     font-family: Georgia, Times, serif;
-    background-color: #e91100;
-    border-top: 3px solid #e91100;
-    border-bottom: 3px solid #e91100;
+    background: #CCC;
+    opacity:0.6;
+    border-top: 3px solid floralwhite;
+    border-bottom: 3px solid floralwhite;
     padding-top: .2em;
     padding-bottom: .2em;
     padding-left: .8em;
     margin: 0;
+
 }
 
 #header {
     position: absolute;
-    border-top: 3px solid #e91100;
+    border-top: 3px solid floralwhite;
     width: 100%;
 }
 
@@ -47,7 +52,8 @@ h1 {
     top: 110px;
     width: 110px;
     height: 180px;
-    background-color: #e91100;
+    background: #CCC;
+    opacity:0.6;
     color:black;
     padding-left: .8em;
 ;
@@ -67,7 +73,8 @@ h1 {
     top: 110px;
     width: 120px;
     height:180px;
-    background-color: #e91100;
+    background: #CCC;
+    opacity:0.6;
     color:#e91100;
     padding-left: .8em;
 ;
@@ -85,6 +92,18 @@ h1 {
 
 }
 
+#navigation a {
+    color: #e91100;
+}
+#postcontent a {
+    color: #e91100;
+}
+p {
+    color: #e91100;
+}
+
+
+
 
 
 
@@ -100,11 +119,11 @@ h1 {
 
 /* class selector*/
 .test {
-    color: #e91100;
+    color: black;
 }
 
 .highlight {
     border-width: 10px;
     border-style: inset;
-    border-color: #e91100;
+    border-color: black;
 }

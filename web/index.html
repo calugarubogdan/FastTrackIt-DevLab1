@@ -13,19 +13,10 @@ FastTrackIT 2015
   <head>
     <title>Our first Lab</title>
       <meta charset="utf-8"/>
-      <!--<link href="numguessstyle.css" rel="stylesheet" type="text/css"/>-->
+      <link href="numguessstyle.css" rel="stylesheet" type="text/css"/>
       <link href="coca-cola.css" rel="stylesheet" type="text/css"/>
 
     <script language="JavaScript">
-        function theme(){
-            document.getElementById("serverResponse").innerText="";
-            xmlHttp = new XMLHttpRequest();
-            xmlHttp.onreadystatechange=callback;
-            var url ="NumGenServlet"+"?requestRestartGame=1";
-            xmlHttp.open("GET",url,true);
-            xmlHttp.send();
-        }
-
         function reset(){
             document.getElementById("serverResponse").innerText="";
             xmlHttp = new XMLHttpRequest();
@@ -101,7 +92,7 @@ FastTrackIT 2015
       </div>
   </div>
   <div id="navigation">
-     <a href="javascript:guessLink(1)">It could be 1</a></br>
+      <a href="javascript:guessLink(1)">It could be 1</a></br>
       <a href="javascript:guessLink(2)">It could be 2</a></br>
       <a href="javascript:guessLink(3)">It could be 3</a></br>
       <a href="javascript:guessLink(4)">It could be 4</a></br>
@@ -129,5 +120,7 @@ FastTrackIT 2015
       <a href="javascript:guessLink(10)">It could be 10</a></br>
   </div>
 
+  <img src="http://wallpaperdownload.info/download/2179/Creative1/Coca_cola_bottle_drink_grass_nature_wallpaper_-1365x639.jpg" />
   </body>
+
 </html>
