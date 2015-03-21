@@ -13,9 +13,19 @@ FastTrackIT 2015
   <head>
     <title>Our first Lab</title>
       <meta charset="utf-8"/>
-      <link href="numguessstyle.css" rel="stylesheet" type="text/css"/>
+      <!--<link href="numguessstyle.css" rel="stylesheet" type="text/css"/>-->
+      <link href="coca-cola.css" rel="stylesheet" type="text/css"/>
 
     <script language="JavaScript">
+        function theme(){
+//        <link href="numguessstyle.css" rel="stylesheet" type="text/css"/>
+            document.getElementById("serverResponse").innerText="";
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange=callback;
+            var url ="NumGenServlet"+"?requestRestartGame=1";
+            xmlHttp.open("GET",url,true);
+            xmlHttp.send();
+        }
 
         function reset(){
             document.getElementById("serverResponse").innerText="";
@@ -85,7 +95,7 @@ FastTrackIT 2015
 
   <div id="header">
       <div id="sitebranding">
-          <h1>FastTrackIT.org</h1>
+          <img style="-webkit-user-select: none" src="http://www.picgifs.com/graphics/c/coca-cola/graphics-coca-cola-774238.gif" height="71" width="200"/>
       </div>
       <div id="tagline">
           <p>Welcome to our first Lesson !</p>
