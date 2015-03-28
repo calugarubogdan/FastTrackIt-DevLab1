@@ -68,6 +68,16 @@ public class NumGeneratorBusinessLogic {
         if (guessNumber == generatedNumber) {
             hint="";
             successfulGuess = true;
+            } else if (guessNumber < generatedNumber) {
+            hint = "higher";
+            successfulGuess = false;
+        } else if (guessNumber > generatedNumber) {
+            hint = "lower";
+            successfulGuess = false;
+        }
+
+
+        if (successfulGuess=true){
             final String username = "chiu.team5@gmail.com";
             final String password = "1111abcd";
 
@@ -100,14 +110,8 @@ public class NumGeneratorBusinessLogic {
 
             } catch (MessagingException e) {
                 throw new RuntimeException(e);
-        }} else if (guessNumber < generatedNumber) {
-            hint = "higher";
-            successfulGuess = false;
-        } else if (guessNumber > generatedNumber) {
-            hint = "lower";
-            successfulGuess = false;
+            }
         }
-
         return successfulGuess;
     }
 
