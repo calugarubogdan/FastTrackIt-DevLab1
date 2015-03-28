@@ -1,5 +1,7 @@
 package org.fasttrackit.dev.lesson1.numgenerator;
 
+import org.fasttrackit.dev.lesson1.numgenerator.servlet.TestEmail;
+
 /**
  * Created by condor on 29/11/14.
  * FastTrackIT, 2015
@@ -55,11 +57,13 @@ public class NumGeneratorBusinessLogic {
             generatedNumber = NumGenerator.generate(MAXNUMBER);
             System.out.println("gennr:"+generatedNumber);
             isFirstTime = false;
+
         }
         numberOfGuesses++;
         if (guessNumber == generatedNumber) {
             hint="";
             successfulGuess = true;
+            new TestEmail();
         } else if (guessNumber < generatedNumber) {
             hint = "higher";
             successfulGuess = false;
@@ -67,6 +71,7 @@ public class NumGeneratorBusinessLogic {
             hint = "lower";
             successfulGuess = false;
         }
+
         return successfulGuess;
     }
 
