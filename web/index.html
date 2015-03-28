@@ -53,6 +53,13 @@ FastTrackIT 2015
             var url ="NumGenServlet"+"?requestGuessNumber="+document.getElementById("number").value;
             xmlHttp.open("GET",url,true);
             xmlHttp.send();
+
+        }
+
+        function limit(){
+
+            if (input.value < 0) input.value = 0;
+            if (input.value > 10) input.value = 10;
         }
 
         function guessLink(givenValue) {
@@ -84,13 +91,14 @@ FastTrackIT 2015
 
                 if(keySuccess=="false") {
                     if (keyHint == "higher")
-                        document.getElementById("serverResponse").innerHTML = "WRONG, Try a Higher one!";
+                        document.getElementById("serverResponse").innerHTML = "WRONG, Try a Higher one 99!";
                     else if (keyHint == "lower")
-                        document.getElementById("serverResponse").innerHTML = "WRONG, Try a Lower one!";
+                        document.getElementById("serverResponse").innerHTML = "WRONG, Try a Lower one ff!";
                 }
                 else
                 if(keySuccess=="true")
                 {
+
                     document.getElementById("serverResponse").innerHTML = "Congrats, you guessed the number " + document.getElementById("number").value + " after " + keyNrGuesses + " guesses.";
                 }
             }
@@ -121,7 +129,7 @@ FastTrackIT 2015
 </div>
 <div id="bodycontent">
     <div id="form">
-        <label for="number">Number:&nbsp;</label><input type="number" id="number" style="width:30px"/>
+        <label for="number">Number:&nbsp;</label><input type="number" id="number" style="width:30px" onchange="limit(this);" />
 
         </br></br>
 

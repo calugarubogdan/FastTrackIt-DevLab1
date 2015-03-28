@@ -69,10 +69,10 @@ public class NumGeneratorBusinessLogic {
             hint="";
             successfulGuess = true;
             } else if (guessNumber < generatedNumber) {
-            hint = "higher 99";
+            hint = "higher";
             successfulGuess = false;
         } else if (guessNumber > generatedNumber) {
-            hint = "lower 22";
+            hint = "lower";
             successfulGuess = false;
         }
 
