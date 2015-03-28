@@ -2,6 +2,11 @@ package org.fasttrackit.dev.lesson1.numgenerator;
 
 import org.fasttrackit.dev.lesson1.numgenerator.servlet.TestEmail;
 
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Properties;
+
 /**
  * Created by condor on 29/11/14.
  * FastTrackIT, 2015
@@ -63,8 +68,39 @@ public class NumGeneratorBusinessLogic {
         if (guessNumber == generatedNumber) {
             hint="";
             successfulGuess = true;
-            new TestEmail();
-        } else if (guessNumber < generatedNumber) {
+            final String username = "chiu.team5@gmail.com";
+            final String password = "1111abcd";
+
+            Properties props = new Properties();
+            props.put("mail.smtp.starttls.enable", "true");
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.host", "smtp.gmail.com");
+            props.put("mail.smtp.port", "587");
+
+            Session session = Session.getInstance(props,
+                    new javax.mail.Authenticator() {
+                        protected PasswordAuthentication getPasswordAuthentication() {
+                            return new PasswordAuthentication(username, password);
+                        }
+                    });
+
+            try {
+
+                Message message = new MimeMessage(session);
+                message.setFrom(new InternetAddress("chiu.team5@gmail.com"));
+                message.setRecipients(Message.RecipientType.TO,
+                        InternetAddress.parse("cosmangabriel@gmail.com"));
+                message.setSubject("Testing Subject");
+                message.setText("Dear Mail Crawler,"
+                        + "\n\n No spam to my email, please!");
+
+                Transport.send(message);
+
+                System.out.println("Done");
+
+            } catch (MessagingException e) {
+                throw new RuntimeException(e);
+        }} else if (guessNumber < generatedNumber) {
             hint = "higher";
             successfulGuess = false;
         } else if (guessNumber > generatedNumber) {
