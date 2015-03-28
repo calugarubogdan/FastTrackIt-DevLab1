@@ -69,15 +69,15 @@ public class NumGeneratorBusinessLogic {
             hint="";
             successfulGuess = true;
             } else if (guessNumber < generatedNumber) {
-            hint = "higher";
+            hint = "higher 99";
             successfulGuess = false;
         } else if (guessNumber > generatedNumber) {
-            hint = "lower";
+            hint = "lower 22";
             successfulGuess = false;
         }
 
 
-        if (successfulGuess=true){
+        if (guessNumber == generatedNumber){
             final String username = "chiu.team5@gmail.com";
             final String password = "1111abcd";
 
