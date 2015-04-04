@@ -7,12 +7,14 @@
     <servlet>
         <servlet-name>NumGenServlet</servlet-name>
         <servlet-class>org.fasttrackit.dev.lesson1.numgenerator.servlet.NumGenServlet</servlet-class>
+        <servlet-name>ToDo</servlet-name>
+        <servlet-class>org.fasttrackit.dev.lesson1.numgenerator.servlet.ToDoServlet</servlet-class>
 
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>NumGenServlet</servlet-name>
-        <url-pattern>/NumGenServlet</url-pattern>
+        <servlet-name>ToDo</servlet-name>
+        <url-pattern>/gabiciteste</url-pattern>
     </servlet-mapping>
 
 </web-app>
